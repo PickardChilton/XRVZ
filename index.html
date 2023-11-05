@@ -1,119 +1,252 @@
-<!DOCTYPE html>
-<!-- saved from url=(0064)https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-tiresias-page-script.js" id="dashlane_tiresias"></script><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-webauthn-page-script.js" id="dashlane_webauthn" name="forward_webauthn_ready"></script>
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="https://getbootstrap.com/docs/3.4/favicon.ico">
-    <link rel="canonical" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/">
+<html lang="en"><head><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-tiresias-page-script.js" id="dashlane_tiresias"></script><script src="chrome-extension://fdjamakpfbbddfjaooikfcpapjohcfmg/content/pageScripts/dashlane-webauthn-page-script.js" id="dashlane_webauthn" name="forward_webauthn_ready"></script>
+		<title>three.js vr - teleport</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+		<link type="text/css" rel="stylesheet" href="main.css">
+	</head>
+	<body>
 
-    <title>Sticky Footer Navbar Template for Bootstrap</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="./bootstrap/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./bootstrap/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./bootstrap/sticky-footer-navbar.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./bootstrap/ie-emulation-modes-warning.js.download"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
-  </head>
-
-  <body>
-
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/#">XRVZ<small>.app</small></a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="https://immersiveweb.dev/">About webXR</a></li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Frameworks <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="https://aframe.io/docs">A-Frame</a></li>
-                <li><a href="https://playground.babylonjs.com/">Babylon.js</a></li>
-                <li><a href="https://modelviewer.dev/">model-viewer</a></li>
-                <li><a href="https://needle.tools/">Needle Engine</a></li>
-                <li><a href="https://p5xr.org/">p5.xr</a></li>
-                <li><a href="https://developer.playcanvas.com/en/tutorials/?tags=vr">PlayCanvas</a></li>
-                <li><a href="https://github.com/pmndrs/react-xr">react-xr</a></li>
-                <li><a href="https://threejs.org/examples/?q=webxr">Three.js</a></li>
-              </ul>
-            </li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Connect <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="https://app.autodeskforma.eu/designmode/pro_irijmvc9jt/2dfcaa28-744d-4727-8365-8f190ea516a9?enable-vr">Autodesk Forma</a></li>
-                <li><a href="https://jsfiddle.net/97xyaztg/3/">Matterport</a></li>
-                <li><a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/#">Separated link</a></li>
-                <li><a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer-navbar/#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
-
-    <!-- Begin page content -->
-    <div class="container">
-		  <div class="page-header">
-			<h1>Title</h1>
-		  </div>
-      <div class="row">
-		<div class="col-sm-6">
-		  <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eu consequat enim. Nulla eget metus vitae turpis egestas consequat. Integer aliquet congue quam, eu luctus lectus dictum nec. Etiam tincidunt dui nec magna iaculis interdum. In tincidunt lectus odio, sed dapibus nulla tempor sed. Ut bibendum dignissim sem eget vehicula. Suspendisse sit amet volutpat enim, vel vehicula mauris. Nulla elementum erat ut maximus vulputate. Aliquam feugiat sollicitudin fermentum. Suspendisse risus purus, gravida vel sollicitudin id, dignissim et mauris. In id auctor massa. Proin molestie, metus id hendrerit faucibus, dolor diam commodo libero, id suscipit erat massa a quam. Curabitur quis ante ac dui condimentum rutrum ac sed erat.</p>
+		<div id="info">
+			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> vr - teleport
 		</div>
-		<div class="col-sm-6">
-		  <div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item"  src="https://pickardchilton.github.io/XRVZ/threejsfundamentals-gh-pages/threejs/threejs-webvr-basic-vr-optional.html" ></iframe>
-		  </div>
-		  <p class="text-center">Go <a href="https://pickardchilton.github.io/XRVZ/threejsfundamentals-gh-pages/threejs/threejs-webvr-basic-vr-optional.html">[full screen]</a></p>
-		</div>
-	  </div>
-	  <p>Back to <a href="https://getbootstrap.com/docs/3.4/examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
-	</div>
 
-    <footer class="footer">
-      <div class="container">
-        <p class="text-muted">Place sticky footer content here.</p>
-      </div>
-    </footer>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "../build/three.module.js",
+					"three/addons/": "./jsm/"
+				}
+			}
+		</script>
 
+		<script type="module">
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./bootstrap/jquery-1.12.4.min.js.download" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./bootstrap/bootstrap.min.js.download"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./bootstrap/ie10-viewport-bug-workaround.js.download"></script>
-  
+			import * as THREE from 'three';
 
-</body></html>
+			import { BoxLineGeometry } from 'three/addons/geometries/BoxLineGeometry.js';
+			import { VRButton } from 'three/addons/webxr/VRButton.js';
+			import { XRControllerModelFactory } from 'three/addons/webxr/XRControllerModelFactory.js';
+
+			let camera, scene, raycaster, renderer;
+			let controller1, controller2;
+			let controllerGrip1, controllerGrip2;
+
+			let room, marker, floor, baseReferenceSpace;
+
+			let INTERSECTION;
+			const tempMatrix = new THREE.Matrix4();
+
+			init();
+			animate();
+
+			function init() {
+
+				scene = new THREE.Scene();
+				scene.background = new THREE.Color( 0x505050 );
+
+				camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );
+				camera.position.set( 0, 1, 3 );
+
+				room = new THREE.LineSegments(
+					new BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),
+					new THREE.LineBasicMaterial( { color: 0xbcbcbc } )
+				);
+				scene.add( room );
+
+				scene.add( new THREE.HemisphereLight( 0xa5a5a5, 0x898989, 3 ) );
+
+				const light = new THREE.DirectionalLight( 0xffffff, 3 );
+				light.position.set( 1, 1, 1 ).normalize();
+				scene.add( light );
+
+				marker = new THREE.Mesh(
+					new THREE.CircleGeometry( 0.25, 32 ).rotateX( - Math.PI / 2 ),
+					new THREE.MeshBasicMaterial( { color: 0xbcbcbc } )
+				);
+				scene.add( marker );
+
+				floor = new THREE.Mesh(
+					new THREE.PlaneGeometry( 4.8, 4.8, 2, 2 ).rotateX( - Math.PI / 2 ),
+					new THREE.MeshBasicMaterial( { color: 0xbcbcbc, transparent: true, opacity: 0.25 } )
+				);
+				scene.add( floor );
+
+				raycaster = new THREE.Raycaster();
+
+				renderer = new THREE.WebGLRenderer( { antialias: true } );
+				renderer.setPixelRatio( window.devicePixelRatio );
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+				renderer.xr.addEventListener( 'sessionstart', () => baseReferenceSpace = renderer.xr.getReferenceSpace() );
+				renderer.xr.enabled = true;
+
+				document.body.appendChild( renderer.domElement );
+				document.body.appendChild( VRButton.createButton( renderer ) );
+
+				// controllers
+
+				function onSelectStart() {
+
+					this.userData.isSelecting = true;
+
+				}
+
+				function onSelectEnd() {
+
+					this.userData.isSelecting = false;
+
+					if ( INTERSECTION ) {
+
+						const offsetPosition = { x: - INTERSECTION.x, y: - INTERSECTION.y, z: - INTERSECTION.z, w: 1 };
+						const offsetRotation = new THREE.Quaternion();
+						const transform = new XRRigidTransform( offsetPosition, offsetRotation );
+						const teleportSpaceOffset = baseReferenceSpace.getOffsetReferenceSpace( transform );
+
+						renderer.xr.setReferenceSpace( teleportSpaceOffset );
+
+					}
+
+				}
+
+				controller1 = renderer.xr.getController( 0 );
+				controller1.addEventListener( 'selectstart', onSelectStart );
+				controller1.addEventListener( 'selectend', onSelectEnd );
+				controller1.addEventListener( 'connected', function ( event ) {
+
+					this.add( buildController( event.data ) );
+
+				} );
+				controller1.addEventListener( 'disconnected', function () {
+
+					this.remove( this.children[ 0 ] );
+
+				} );
+				scene.add( controller1 );
+
+				controller2 = renderer.xr.getController( 1 );
+				controller2.addEventListener( 'selectstart', onSelectStart );
+				controller2.addEventListener( 'selectend', onSelectEnd );
+				controller2.addEventListener( 'connected', function ( event ) {
+
+					this.add( buildController( event.data ) );
+
+				} );
+				controller2.addEventListener( 'disconnected', function () {
+
+					this.remove( this.children[ 0 ] );
+
+				} );
+				scene.add( controller2 );
+
+				// The XRControllerModelFactory will automatically fetch controller models
+				// that match what the user is holding as closely as possible. The models
+				// should be attached to the object returned from getControllerGrip in
+				// order to match the orientation of the held device.
+
+				const controllerModelFactory = new XRControllerModelFactory();
+
+				controllerGrip1 = renderer.xr.getControllerGrip( 0 );
+				controllerGrip1.add( controllerModelFactory.createControllerModel( controllerGrip1 ) );
+				scene.add( controllerGrip1 );
+
+				controllerGrip2 = renderer.xr.getControllerGrip( 1 );
+				controllerGrip2.add( controllerModelFactory.createControllerModel( controllerGrip2 ) );
+				scene.add( controllerGrip2 );
+
+				//
+
+				window.addEventListener( 'resize', onWindowResize, false );
+
+			}
+
+			function buildController( data ) {
+
+				let geometry, material;
+
+				switch ( data.targetRayMode ) {
+
+					case 'tracked-pointer':
+
+						geometry = new THREE.BufferGeometry();
+						geometry.setAttribute( 'position', new THREE.Float32BufferAttribute( [ 0, 0, 0, 0, 0, - 1 ], 3 ) );
+						geometry.setAttribute( 'color', new THREE.Float32BufferAttribute( [ 0.5, 0.5, 0.5, 0, 0, 0 ], 3 ) );
+
+						material = new THREE.LineBasicMaterial( { vertexColors: true, blending: THREE.AdditiveBlending } );
+
+						return new THREE.Line( geometry, material );
+
+					case 'gaze':
+
+						geometry = new THREE.RingGeometry( 0.02, 0.04, 32 ).translate( 0, 0, - 1 );
+						material = new THREE.MeshBasicMaterial( { opacity: 0.5, transparent: true } );
+						return new THREE.Mesh( geometry, material );
+
+				}
+
+			}
+
+			function onWindowResize() {
+
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+
+				renderer.setSize( window.innerWidth, window.innerHeight );
+
+			}
+
+			//
+
+			function animate() {
+
+				renderer.setAnimationLoop( render );
+
+			}
+
+			function render() {
+
+				INTERSECTION = undefined;
+
+				if ( controller1.userData.isSelecting === true ) {
+
+					tempMatrix.identity().extractRotation( controller1.matrixWorld );
+
+					raycaster.ray.origin.setFromMatrixPosition( controller1.matrixWorld );
+					raycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );
+
+					const intersects = raycaster.intersectObjects( [ floor ] );
+
+					if ( intersects.length > 0 ) {
+
+						INTERSECTION = intersects[ 0 ].point;
+
+					}
+
+				} else if ( controller2.userData.isSelecting === true ) {
+
+					tempMatrix.identity().extractRotation( controller2.matrixWorld );
+
+					raycaster.ray.origin.setFromMatrixPosition( controller2.matrixWorld );
+					raycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );
+
+					const intersects = raycaster.intersectObjects( [ floor ] );
+
+					if ( intersects.length > 0 ) {
+
+						INTERSECTION = intersects[ 0 ].point;
+
+					}
+
+				}
+
+				if ( INTERSECTION ) marker.position.copy( INTERSECTION );
+
+				marker.visible = INTERSECTION !== undefined;
+
+				renderer.render( scene, camera );
+
+			}
+
+		</script>
+	
+
+<canvas data-engine="three.js r158" width="1560" height="481" style="display: block; width: 1560px; height: 481px;"></canvas><button id="VRButton" style="position: absolute; bottom: 20px; padding: 12px 6px; border: 1px solid rgb(255, 255, 255); border-radius: 4px; background: rgba(0, 0, 0, 0.1); color: rgb(255, 255, 255); font: 13px sans-serif; text-align: center; opacity: 0.5; outline: none; z-index: 999; cursor: auto; left: calc(50% - 75px); width: 150px;">VR NOT SUPPORTED</button></body></html>
