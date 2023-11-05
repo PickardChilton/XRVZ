@@ -14,6 +14,12 @@
 			<a href="https://xrvz.app">XRVZ.app</a>
 		</div>
 
+		<canvas id="c"></canvas>
+		<div class="mode">
+		  <a href="?allowvr=true" id="vr">Allow VR</a>
+		  <a href="?" id="nonvr">Use Non-VR Mode</a>
+		</div>'
+		
 		<script type="importmap">
 			{
 				"imports": {
@@ -30,6 +36,7 @@
 			import { BoxLineGeometry } from 'three/addons/geometries/BoxLineGeometry.js';
 			import { VRButton } from 'three/addons/webxr/VRButton.js';
 			import { XRControllerModelFactory } from 'three/addons/webxr/XRControllerModelFactory.js';
+			import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
 			let camera, scene, raycaster, renderer;
 			let controller1, controller2;
